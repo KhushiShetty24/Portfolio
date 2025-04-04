@@ -57,7 +57,7 @@
     <h1 > Khushi Shetty</h1>
     <p class="typewriter" style="font-weight: bold;">  </p><br>
     <p style="text-align: justify; margin-bottom: 1rem;">I am an enthusiastic Electronics and Communication Engineering student passionate about innovation and technology. My academic journey, from Lourdes Central School, Mangalore, to pursuing my Bachelor's, has strengthened my technical and analytical skills. With a keen interest in embedded systems, VLSI, and programming, I thrive on challenges and continuous learning. I aim to contribute to innovative solutions and make a meaningful impact in the tech industry through adaptability, teamwork, and problem-solving.</p>
-    <a href="./resume.html" class="resume transition-link">View Resume</a>
+    <a href="./resume.html" class="resume">View Resume</a>
     <a class="resume" href="./resume.html" download="resume.pdf">Download Resume</a></div>
 
  <div>  
@@ -157,7 +157,7 @@
                     <li>RFID-based Destination Selection</li>
                 </ul>
             </div>
-            <a class="resume view-more transition-link" href="./robot.html">View more</a>
+            <a class="resume view-more" href="./robot.html">View more</a>
         </div>
         <div class="project-item">
             <h3 style="color:  #FF8F04;">Arduino I/O expansion board using I2C protocol</h3>
@@ -170,7 +170,7 @@
                     <li>2 Modules for LCD Display</li>
                 </ul>
             </div>
-            <a class="resume transition-link view-more" href="./arduino.html">View more</a>
+            <a class="resume view-more" href="./arduino.html">View more</a>
         </div>
        
     </div>
@@ -332,23 +332,6 @@
         }
     }
     typeWriter();
-
-
- 
-document.addEventListener("DOMContentLoaded", () => {
-    document.body.classList.remove("fade-out");
-});
-
-
-document.querySelector(".resume").addEventListener("click", (event) => {
-    event.preventDefault(); 
-
-    document.body.classList.add("fade-out"); 
-
-    setTimeout(() => {
-        window.location.href = event.target.href; 
-    }, 500); 
-});
 
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault();

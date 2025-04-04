@@ -401,8 +401,8 @@ h4{
 
 
 .view-more:hover {
-    background: white;
-    color: #FF8F04;
+    background: hsl(29, 99%, 49%);
+    color: white;
     transform: scale(1.05);
 }
 
