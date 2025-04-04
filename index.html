@@ -334,15 +334,22 @@
     typeWriter();
 
 
-    document.querySelector(".resume").addEventListener("click", (event) => {
-        event.preventDefault(); 
+ 
+document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.remove("fade-out");
+});
 
-        document.body.classList.add("fade-out");
 
-        setTimeout(() => {
-            window.location.href = event.target.href;
-        }, 500); 
-    });
+document.querySelector(".resume").addEventListener("click", (event) => {
+    event.preventDefault(); 
+
+    document.body.classList.add("fade-out"); 
+
+    setTimeout(() => {
+        window.location.href = event.target.href; 
+    }, 500); 
+});
+
     document.getElementById("contact-form").addEventListener("submit", function(event) {
         event.preventDefault();
         
