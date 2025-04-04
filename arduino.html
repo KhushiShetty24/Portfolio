@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous Mobile Robot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(180deg, rgba(55, 56, 81, 0.9), rgba(29, 18, 62, 0.7)), url('./assets/background1.jpg');
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+        .back-to-portfolio {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            text-shadow: 2px 2px 8px #c4bbb4bf;
+            transition: color 0.3s, text-shadow 0.3s;
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+        }
+        .back-to-portfolio a{
+            text-decoration: none;
+            color: #fff;
+        
+        }
+        .back-to-portfolio:hover {
+            color: #ff9800;
+            text-shadow: 0 0 5px #ff6600;
+            transform: scale(1.1);
+        }
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ff9800;
+            text-shadow: 2px 2px 8px #e7890ecd;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px #e7890ecd;
+        }
+
+        .container {
+            width: 85%;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        .block {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .block figure {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            text-align: center;
+        }
+        
+        .block img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        
+    .image-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+
+    .image-item img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px; 
+    }
+
+
+    figcaption {
+        font-size: 1.2em;
+        color: #f37b0bb3;
+        font-weight: bold;
+    }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #ff9800;
+            font-size: 2em;
+            margin-bottom: 15px;
+            text-shadow: 2px 0px 8px #e7890ecd;
+        }
+        
+        .section p, .section ul {
+            font-size: 1.2rem;
+            line-height: 1.3;
+            
+        }
+
+        .view-project {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 50px;
+           
+        }
+        
+        .view-project a {
+            display: inline-block;  
+            text-decoration: none;
+            background: #ff9800;
+            padding: 15px 30px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-align: center;
+            max-width: 100%;
+            white-space: normal;
+            word-wrap: break-word;
+            line-height: 1; 
+            transition: transform 0.3s ease;
+        }
+        
+        
+        .view-project a:hover {
+            transform: scale(1.1); 
+            box-shadow: 4px 4px 8px#df8806c6;
+            color: rgba(1, 1, 44, 0.993);
+        }
+
+        @media (max-width: 768px) {
+           
+            header {
+              padding: 15px;
+            }
+            nav ul {
+              text-align: center;
+              padding: 10px 0;
+            }
+          
+            nav ul li {
+              display: block;
+              margin: 10px 0;
+            }
+          
+           
+            section {
+              padding: 15px;
+            }
+            .section p, .section ul{
+                font-size: 1rem
+            }
+            .hero h1{
+             font-size: 1.5rem;   
+            }
+
+            img,  video {
+              width: 100%;
+              object-fit: contain;
+            }
+            .project-container {
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .project-item {
+                width: 100%;
+                
+            }
+                .block {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .block figure {
+                    margin: 0;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+                }
+            
+                .block img {
+                    height: 250px;
+                    width: 250px;
+                    margin-left: auto;
+                    margin-right: auto;
+                    object-fit: contain;
+                    margin-bottom: 0;
+                }
+                .view-project a{
+                    font-size: 0.8rem;
+                }
+            figure{
+                font-size: 0.8rem;
+            }
+            .back-to-portfolio{
+                font-size: 0.8rem;
+            }
+            }
+          
+         
+    .project-showcase {
+        padding: 50px 20px;
+        background: #12121265;
+        color: white;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+        color: #ff9800;
+    }
+
+
+    .project-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+
+    .project-item {
+        width: 45%;
+        text-align: center;
+    }
+
+    .project-img, .project-video {
+    
+        width: 100%;
+        max-width: 600px; 
+        max-height: 500px; 
+        margin-bottom: 20px;
+        object-fit: cover; 
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.461);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-img:hover, .project-video:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+    }
+    footer {
+        text-align: center;
+        background: #111;
+        color: #fff;
+        padding: 15px;
+        font-size: 14px;
+        box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.1);
+    }
+    
+    footer a {
+        color: #e7890e;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    footer a:hover {
+        text-shadow: 0 0 5px #ff9d1e;
+    }
+        
+    </style>
+</head>
+<body>
+   
+    <div class="hero">
+      <a href="./index.html#Projects"> <div class="back-to-portfolio" > <i style='font-size:24px' class='far'>&#xf359;</i> Back to Portfolio</div></a>
+        <h1>ARDUINO UNO I/O EXPANSION BOARD
+            USING I2C PROTOCOL</h1>
+        <p style="font-weight: bold;">Efficient Expansion of Arduino's I/O Capabilities through Multiple PCF8574 Modules</p>
+    </div>
+
+    <div class="container">
+        <section class="Introduction section">
+            <h2>Introduction</h2>
+            <p>This project focuses on enhancing the capabilities of an Arduino Uno by incorporating multiple PCF8574 I/O expander modules. The Arduino Uno, with its limited 14 digital I/O pins, is expanded by adding eight additional I/O pins per module, allowing for a greater range of interfacing with external devices. This system aims to facilitate effective management and control of various input and output devices, overcoming the limitations of the Arduino Uno’s native I/O capacity.</p>
+            <h3>Project Components</h3>
+            <ul>
+                <li><b>Input Board (3 Modules):</b> Utilizes PCF8574 modules to interface with DIP switches, increasing the number of digital inputs.</li>
+                <li><b>Output Board (3 Modules): </b>Controls LEDs, offering expanded options for visual output and control.</li>
+                <li><b>LCD Display (2 Modules with Potentiometer):</b>LCD Enables connection and control of LCD displays for user interaction and visual representation.</li>
+            </ul>
+            <h3>Objective</h3>
+                <p>The goal is to design, implement, and evaluate a system that accommodates multiple PCF8574 I/O expanders, enabling the Arduino Uno to manage a wide range of external devices, especially for applications with extensive I/O requirements.</p>
+            
+        </section>
+        <section class="Circuit-design section">
+            <h2>Circuit Design</h2>
+
+           <p>The circuit design involves integrating eight PCF8574 I/O expander modules with the
+            Arduino Uno via the I2C bus. Each PCF8574 module provides eight additional I/O ports,
+            resulting in a total of 64 additional I/O points. The circuit diagrams and schematics include:</p>
+            <h3>Block Diagram of the 3 modules:</h3>
+            <ul>
+                <li>Digital Output Board: Each PCF8574 module is connected to eight LEDs with
+                    current-limiting resistors.</li>
+                <li>Digital Input Board: Each PCF8574 module is connected to a dip switch with 8
+                    inbuilt switches with pull-up resistors.</li>
+                <li>LCD Connections: Two 16x2 LCD displays are connected to the PCF8574 modules
+                    for data display.</li>
+                <li>Original Board: This module will contain LEDs and dip switches to show that the
+                    existing I/O pins of the Arduino Uno board work efficiently even after expansion.</li>
+            </ul>
+            <div class="block">
+                <div class="item"> 
+                    <figure>
+                        <img src="./imgs/block1.png" alt="Block diagram 1">
+                        <figcaption>Block diagram of the expansion board</figcaption>
+                    </figure>
+                </div>
+                <div class="item"> 
+                    <figure>
+                        <img src="./imgs/block2.png" alt="Block diagram 2">
+                        <figcaption>Block diagram of Input Module</figcaption>
+                    </figure>
+                </div>
+                <div class="item"> 
+                    <figure>
+                        <img src="./imgs/block3.png" alt="Block diagram 3">
+                        <figcaption>Block diagram of Output module</figcaption>
+                    </figure>
+                </div>
+            </div>
+            
+        </section>
+
+        <section>
+            <h2>Circuit Diagram</h2>
+            <figure class="image-item">
+                <img style="max-height:400px;" src="./imgs/arduino-circuit.png" alt="Image 2">
+                <figcaption>Circuit Diagram</figcaption>
+            </figure>
+        </section>
+        <section class="experimental-setup-results section">
+            <h2>Experimental Setup and Results</h2>
+            <p>The experimental setup consists of assembling the Arduino Uno, the I/O expansion board, and the testing components on a breadboard. The experimental protocol includes:</p>
+            <ul>
+                <li>Connecting the Arduino Uno to the PCF8574 modules via the I2C bus.</li>
+                <li>Configuring the PCF8574 modules with unique addresses.</li>
+                <li>Writing and uploading test code using Arduino IDE to the Arduino Uno to toggle outputs and read inputs.</li>
+                <li>Observing and recording the behavior of LEDs, dip switches, and LCD displays.</li>
+            </ul>
+            
+            <h3>Experimental Results</h3>
+            <p>The project successfully expanded the input/output (I/O) pin count of the Arduino Uno from 14 to 78, significantly enhancing the system's versatility and capability. This expansion allows the system to connect a greater number of external devices and sensors, essential for handling more complex tasks and larger projects. The additional I/O pins support enhanced functionality, such as:</p>
+            <ul>
+                <li><b>Digital Output Control:</b> Three modules are used to control LEDs, providing visual indicators of the system's operations. The LEDs on the Digital Output Board reliably illuminate, confirming the correct operation of the digital output functionality.</li>
+                <li><b>Digital Input Monitoring:</b> Three modules monitor the state of switches. The system responds to user inputs by displaying the corresponding status of the switches on the serial monitor. Additionally, the LCD displays pertinent messages corresponding to these inputs, demonstrating the system’s ability to interpret digital inputs accurately.</li>
+            </ul>
+            <p>This system’s expanded I/O functionality not only validates the effectiveness of the expansion but also confirms its capability to handle more complex tasks with enhanced control over external devices and sensors.</p>
+        </section>
+        
+        <section class="project-showcase">
+            <h2>Project Demonstration</h2>
+            
+            <div class="project-container">
+
+                <figure class=".image-item project-item">
+                    <img  src="./imgs/arduino-prototype.jpg" alt="Project Image" class="project-img">
+                    <figcaption>Final Prototype</figcaption>
+                </figure>
+        
+                
+                <figure class=".image-item project-item">
+                    <video controls class="project-video">
+                        <source src="./imgs/arduino (1).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>Project in Action</figcaption>
+                </figure>
+            </div>
+        </section>
+        
+
+</section>
+        <section class="view-project">
+            <a href="https://github.com/KhushiShetty24/Arduino-i-o-Expansion" target="blank">View Project Code on Github</a>
+        </section>
+    </div>
+    <footer>
+        <p>© 2025 Khushi Shetty &nbsp;| &nbsp;<a href="./index.html#Projects">Back to Portfolio</a></p>
+    </footer>
+    
+</body>
+</html>
